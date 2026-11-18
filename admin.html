@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Secure school administration portal">
+  <title>Administration | Mandla Mbatha School NPC</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/admin.css">
+</head>
+<body class="admin-page">
+  <header>
+    <a class="brand" href="/#home"><span><b>MANDLA MBATHA SCHOOL</b><small>ADMINISTRATION PORTAL</small></span></a>
+    <a class="admin-home-link" href="/">View public website</a>
+  </header>
+  <main class="admin-main">
+    <section class="admin-intro">
+      <p class="eyebrow">RESTRICTED ACCESS</p>
+      <h1>Admissions enquiries</h1>
+      <p>This area contains parent and learner contact information. Only authorised school administrators should access it. Do not use a shared or public device.</p>
+    </section>
+    <section class="admin-card" aria-labelledby="accessTitle">
+      <div id="loginPanel">
+        <h2 id="accessTitle">Administrator access</h2>
+        <form id="loginForm">
+          <label for="adminKey">Administrator key</label>
+          <input id="adminKey" name="adminKey" type="password" autocomplete="off" required>
+          <button class="button" type="submit">Unlock records</button>
+        </form>
+        <p id="loginStatus" class="admin-status" role="status">The school’s administrator key is set by the website operator.</p>
+      </div>
+      <div id="recordsPanel" hidden>
+        <div class="admin-toolbar">
+          <div><h2>Submitted enquiries</h2><p id="recordCount" class="muted">Loading records…</p></div>
+          <div class="admin-actions">
+            <button id="refreshButton" class="button secondary" type="button">Refresh</button>
+            <button id="exportButton" class="button" type="button">Export CSV</button>
+            <button id="logoutButton" class="button outline" type="button">Log out</button>
+          </div>
+        </div>
+        <p id="recordsStatus" class="admin-status" role="status"></p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Reference / Date</th><th>Parent / guardian</th><th>Contact</th><th>Learner</th><th>Grade</th><th>Enquiry</th></tr></thead>
+            <tbody id="recordsBody"><tr><td colspan="6">No records loaded.</td></tr></tbody>
+          </table>
+        </div>
+        <div class="admin-pagination"><button id="previousButton" class="button outline" type="button">Previous</button><span id="pageStatus" class="muted">Page 1</span><button id="nextButton" class="button outline" type="button">Next</button></div>
+        <p class="privacy-warning">Handle these records confidentially. Downloaded CSV files contain personal information; store them securely and delete unnecessary copies.</p>
+      </div>
+    </section>
+  </main>
+  <footer><b>MANDLA MBATHA SCHOOL NPC</b><p>Educate to Educate</p></footer>
+  <script src="/admin.js" defer></script>
+</body>
+</html>

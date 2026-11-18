@@ -1,0 +1,9 @@
+Mandla Mbatha School NPC Website — Version 1.3.0
+
+- Added the supplied official gold-and-navy school crest to the website header.
+- Updated header slogan to “We Educate to Educate”.
+- Added NPC and PBO registration references shown on the supplied school banner to the footer.
+- Corrected the optional OpenAI Responses API model default to gpt-6-astra, matching the current official API quickstart example.
+- Retained the admissions database, admin dashboard, CSV export, privacy notice and server-side assistant integration from v1.2.
+
+Before production use: revoke the previously exposed API key and configure a newly created key only in the hosting provider's server-side secret settings. Review the privacy notice and confirm current contact/domain details.
